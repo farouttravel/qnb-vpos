@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone ="yes" ?>
+<PayforRequest>
+<MbrId>5</MbrId>
+<MerchantID>009600000005835</MerchantID>
+<UserCode>adminseasafari</UserCode>
+<SecureType>3DHost</SecureType>
+<TxnType>Auth</TxnType>
+<InstallmentCount>0</InstallmentCount>
+<Currency>949</Currency>
+<OkUrl>https://vpos.qnbfinansbank.com//Payfor.UI//PayforScripts//5//009600000005835//xml//Payfor3DHostPayment.xml</OkUrl>
+<FailUrl>https://vpos.qnbfinansbank.com//Payfor.UI//PayforScripts//5//009600000005835//xml//Payfor3DHostPayment.xml</FailUrl>
+<OrderId></OrderId>
+<OrgOrderId></OrgOrderId>
+<PurchAmount>1</PurchAmount>
+<Lang>TR</Lang>
+<Rnd>170245157</Rnd>
+<Hash>62TtMmUrbHpP37THmnQNP8HMHtY=</Hash>
+<TemplateType>1</TemplateType>
+<ShippingNameSurname>Vpos Destek</ShippingNameSurname>
+<ShippingEmail>vpos_destek@qnbfinansbank.com</ShippingEmail>
+<ShippingPhone>00901112223344</ShippingPhone>
+<ShippingNationalId>12345678909</ShippingNationalId>
+<ShippingCompanyName>Cardtek Payment Solutions</ShippingCompanyName>
+<ShippingTaxOffice>Istanbul</ShippingTaxOffice>
+<ShippingTaxNo>1234567890</ShippingTaxNo>
+<ShippingAddress>ITU KoruYolu Ayazaga Maslak</ShippingAddress>
+<ShippingTown>Sariyer</ShippingTown>
+<ShippingCity>Istanbul</ShippingCity>
+<ShippingZipCode>34333</ShippingZipCode>
+<ShippingCountry>Turkey</ShippingCountry>
+<BillingNameSurname>Vpos Destek</BillingNameSurname>
+<BillingEmail>vpos_destek@qnbfinansbank.com</BillingEmail>
+<BillingPhone>00901112223344</BillingPhone>
+<BillingNationalId>12345678909</BillingNationalId>
+<BillingCompanyName>Cardtek Payment Solutions</BillingCompanyName>
+<BillingTaxOffice>Istanbul</BillingTaxOffice>
+<BillingTaxNo>1234567890</BillingTaxNo>
+<BillingAddress>ITU KoruYolu Ayazaga Maslak</BillingAddress>
+<BillingTown>Sariyer</BillingTown>
+<BillingCity>Istanbul</BillingCity>
+<BillingZipCode>34333</BillingZipCode>
+<BillingCountry>Turkey</BillingCountry>
+</PayforRequest>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone ="yes" ?>
+<PayforRequest>
+<MbrId>5</MbrId>
+<MerchantID>009600000005835</MerchantID>
+<UserCode>adminseasafari</UserCode>
+<UserPass>xxxxxxxxxxxx</UserPass>
+<Currency>949</Currency>
+<SecureType>NonSecure</SecureType>
+<TxnType>BatchClose</TxnType>
+<Lang>TR</Lang>
+<TerminalId>VPS123456</TerminalId>
+</PayforRequest>
+

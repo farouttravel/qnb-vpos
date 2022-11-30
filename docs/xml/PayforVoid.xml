@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone ="yes" ?>
+<PayforRequest>
+<MbrId>5</MbrId>
+<MerchantID>009600000005835</MerchantID>
+<UserCode>adminseasafari</UserCode>
+<UserPass>xxxxxxxxxxxx</UserPass>
+<OrgOrderId>orderIdofOriginalTxn</OrgOrderId>
+<SecureType>NonSecure</SecureType>
+<TxnType>Void</TxnType>
+<Currency>949</Currency>
+<Lang>TR</Lang>
+</PayforRequest>
+

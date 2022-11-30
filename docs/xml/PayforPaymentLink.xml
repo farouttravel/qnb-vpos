@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone ="yes" ?>
+<PayforRequest>
+<MbrId>5</MbrId>
+<MerchantID>009600000005835</MerchantID>
+<UserCode>adminseasafari</UserCode>
+<UserPass>xxxxxxxxxxxx</UserPass>
+<OrderId>20221130170245080</OrderId>
+<TxnType>PaymentLink</TxnType>
+<PurchAmount>19.99</PurchAmount>
+<Currency>949</Currency>
+<InstallmentCount>0</InstallmentCount>
+<IsDisposable>{IsDisposable}</IsDisposable>
+<IsMerchantDes>{IsMerchantDes}</IsMerchantDes>
+<IsCustomerDes>{IsCustomerDes}</IsCustomerDes>
+<InformMerchant>{InformMerchant}</InformMerchant>
+<MerchantDescription>{MerchantDescription}</MerchantDescription>
+<LinkCommunicationDetail>{LinkCommunicationDetail}</LinkCommunicationDetail>
+<LinkSendType>{LinkSendType}</LinkSendType>
+<LinkStartExpireDatetime>{LinkStartExpireDatetime}</LinkStartExpireDatetime>
+<LinkEndExpireDatetime>{LinkEndExpireDatetime}</LinkEndExpireDatetime>
+</PayforRequest>
+

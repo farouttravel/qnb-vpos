@@ -1,0 +1,14 @@
+{
+    "name": "farout/qnb-vpos",
+    "type": "project",
+    "require": {
+        "oscarotero/env": "^2.1",
+        "vlucas/phpdotenv": "^5.5"
+    },
+    "authors": [
+        {
+            "name": "Mevlüt Canvar",
+            "email": "mevlutcanvar@gmail.com"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone ="yes" ?>
+<PayforRequest>
+<MbrId>5</MbrId>
+<MerchantID>009600000005835</MerchantID>
+<UserCode>adminseasafari</UserCode>
+<SecureType>3DPay</SecureType>
+<TxnType>Auth</TxnType>
+<InstallmentCount>0</InstallmentCount>
+<Currency>949</Currency>
+<CardHolderName>finansbank</CardHolderName>
+<Pan>4022780198283155</Pan>
+<Expiry>0150</Expiry>
+<Cvv2>105</Cvv2>
+<OkUrl>https://vpos.qnbfinansbank.com//Payfor.UI//PayforScripts//5//009600000005835//xml//Payfor3DPayPayment.xml</OkUrl>
+<FailUrl>https://vpos.qnbfinansbank.com//Payfor.UI//PayforScripts//5//009600000005835//xml//Payfor3DPayPayment.xml</FailUrl>
+<OrderId></OrderId>
+<OrgOrderId></OrgOrderId>
+<PurchAmount>1</PurchAmount>
+<Lang>TR</Lang>
+<Rnd>170245126</Rnd>
+<Hash>62TtMmUrbHpP37THmnQNP8HMHtY=</Hash>
+</PayforRequest>
+
