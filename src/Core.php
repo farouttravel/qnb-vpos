@@ -2,19 +2,17 @@
 
 namespace Vpos;
 
-use Exception;
-
 class Core
 {
-    const HOMEPAGE_NAME = 'Home';
-    const RESULT_PAGE_NAME = 'Payfor3DHostPayment';
+    const PAGE_NAME_HOMEPAGE = 'Home';
+    const PAGE_NAME_RESULT = 'Payfor3DHostPayment';
     const PAGE_NAME_NOT_FOUND = 'NotFound';
 
     public $pageName;
 
     function __construct()
     {
-        $this->pageName = isset($_POST["3DStatus"]) ? self::RESULT_PAGE_NAME : self::pageParameter();
+        $this->pageName = isset($_POST["3DStatus"]) ? self::PAGE_NAME_RESULT : self::pageParameter();
     }
 
     function getPageName()
@@ -44,7 +42,7 @@ class Core
 
     static function pageParameter()
     {
-        return isset($_GET['p']) ? $_GET['p'] : self::HOMEPAGE_NAME;
+        return isset($_GET['p']) ? $_GET['p'] : self::PAGE_NAME_HOMEPAGE;
     }
 
     function loadPage()
