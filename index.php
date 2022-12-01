@@ -1,6 +1,6 @@
 <?php
 include_once './vendor/autoload.php';
-include './layout/header.html';
+include_once './layout/header.html';
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
@@ -40,7 +40,7 @@ function env($name)
             $path = './pages/' . $page . '.php';
 
             if (file_exists($path)) {
-                include $path;
+                include_once $path;
             } else {
                 throw new Exception('404: Not Found!', 404);
             }
@@ -55,4 +55,4 @@ function env($name)
         <?php endif ?>
     </div>
 
-    <?php include './layout/footer.html' ?>
+    <?php include_once './layout/footer.html' ?>
