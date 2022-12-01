@@ -6,12 +6,12 @@ $UserCode = env('3D_HOST_USER_CODE');
 $SecureType = env('3D_HOST_SECURE_TYPE');
 $TxnType = env('3D_HOST_TXN_TYPE');
 $InstallmentCount = "0";
-$Currency = env('3D_HOST_CURRENCY_TL');
+$Currency = env('3D_HOST_CURRENCY_EUR');
 $OkUrl = env('3D_HOST_OK_URL');
 $FailUrl = env('3D_HOST_FAIL_URL');
-$OrderId = '234234';
+$OrderId = 'FO' . time();
 $OrgOrderId = '';
-$PurchAmount = '4';
+$PurchAmount = '3';
 $Lang = env('3D_HOST_LANG_TR');
 $rnd = microtime();
 $hashstr = $MbrId . $OrderId . $PurchAmount . $OkUrl . $FailUrl . $TxnType . $InstallmentCount . $rnd . $MerchantPass;
@@ -20,7 +20,7 @@ $hash = base64_encode(pack('H*', sha1($hashstr)));
 
 <form method="post" action="<?= env('3D_HOST_FORM_ACTION') ?>">
     <h2>
-        PayFor - 3D Host
+        <?= isset($_GET['p']) ? str_split($_GET['p'], 6)[1] : ""; ?>, Order ID: <?= 'FO' . time() ?>
     </h2>
 
     <input type='submit' value='Gonder' class='btn btn-primary'/>
