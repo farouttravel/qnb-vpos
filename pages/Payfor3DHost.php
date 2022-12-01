@@ -24,7 +24,6 @@ $hash = base64_encode(pack('H*', sha1($hashstr)));
 <form method="post" action="<?= env('3D_HOST_FORM_ACTION') ?>">
     <h2>
         <?= isset($_GET['p']) ? str_split($_GET['p'], 6)[1] : ""; ?>, Order ID: <?= 'FO' . time() ?>
-        <?= Core::test(); ?>
     </h2>
 
     <input type='submit' value='Gonder' class='btn btn-primary'/>

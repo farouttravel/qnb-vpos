@@ -9,6 +9,8 @@ function env($name)
 {
     return $_ENV[$name];
 }
+
+$app = new \Vpos\Core();
 ?>
 
 <div class="container">
@@ -32,22 +34,14 @@ function env($name)
 
     <div class="row">
         <div class="col-12">
-            <?php
-
-            $page = isset($_GET['p']) ?
-                $_GET['p'] :
-                (isset($_POST["3DStatus"]) ? 'Payfor3DHostPayment' : 'Home');
-            $path = './pages/' . $page . '.php';
-
-            if (file_exists($path)) {
-                include_once $path;
-            } else {
-                throw new Exception('404: Not Found!', 404);
-            }
-            ?>
+            <?php $app->loadPage(); ?>
         </div>
 
-        <?php if ($page !== 'Payfor3DHostPayment' AND $page !== 'Home') : ?>
+        <?php if (
+            $app->getPageName() !== 'Payfor3DHostPayment' and
+            $app->getPageName() !== 'NotFound' and
+            $app->getPageName() !== 'Home'
+        ) : ?>
             <div class="col-12">
                 <h3>Form Parameters:</h3>
                 <table id="json-table"></table>
