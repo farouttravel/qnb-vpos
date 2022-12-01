@@ -5,6 +5,11 @@
         "oscarotero/env": "^2.1",
         "vlucas/phpdotenv": "^5.5"
     },
+    "autoload": {
+        "psr-4": {
+            "Vpos\\": "src/"
+        }
+    },
     "authors": [
         {
             "name": "Mevlüt Canvar",
