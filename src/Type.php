@@ -36,8 +36,6 @@ class Type
         foreach (self::LOOK_UP_PARAMETERS[$name] as $parameter) {
             $envName = $this->getShapedParameterName($parameter);
 
-            var_dump($envName);
-
             $this->parameters[$parameter] = !! env($envName) ? env($envName) : '';
         }
     }
@@ -48,8 +46,8 @@ class Type
 
     private function getShapedParameterName($parameter)
     {
-        $parameter = preg_replace('/((?:^|[A-Z])[a-z]+)/','_$1', $this->name . $parameter);
+        $parameter = preg_replace('/((?:^|[A-Z])[a-z]+|3D|ID)/','_$1', $this->name . $parameter);
 
-        return strtoupper($parameter);
+        return ltrim(strtoupper($parameter), '_');
     }
 }

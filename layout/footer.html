@@ -4,20 +4,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
         integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
         crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
-<script>
-    var values = $("form").map((_, row) => {
-        var value = [];
-        $(row).find(":input").each((__, e) =>
-            value.push([e.name, $(e).val()])
-        );
-        return value;
-    }).toArray();
-
-    new gridjs.Grid({
-        columns: ["name", "value"],
-        data: values
-    }).render(document.getElementById("json-table"));
-</script>
 </body>
 </html>

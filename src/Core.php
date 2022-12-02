@@ -47,7 +47,14 @@ class Core
 
     function loadPage()
     {
-        if (!$this->isPageExists()) {
+        if (
+            !$this->isPageExists() OR
+            (
+                isset($_GET['p']) AND
+                $_GET['p'] === 'Form' AND
+                !isset($_POST['vpos'])
+            )
+        ) {
             http_response_code(404);
 
             $this->setPageName(self::PAGE_NAME_NOT_FOUND);

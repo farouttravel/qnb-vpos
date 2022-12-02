@@ -7,7 +7,7 @@ $dotenv->load();
 
 function env($name)
 {
-    return $_ENV[$name];
+    return isset($_ENV[$name]) ? $_ENV[$name] : null;
 }
 
 $app = new \Vpos\Core();
@@ -36,17 +36,7 @@ $app = new \Vpos\Core();
         <div class="col-12">
             <?php $app->loadPage(); ?>
         </div>
-
-        <?php if (
-            $app->getPageName() !== 'Payfor3DHostPayment' and
-            $app->getPageName() !== 'NotFound' and
-            $app->getPageName() !== 'Home'
-        ) : ?>
-            <div class="col-12">
-                <h3>Form Parameters:</h3>
-                <table id="json-table"></table>
-            </div>
-        <?php endif ?>
     </div>
+</div>
 
-    <?php include_once './layout/footer.html' ?>
+<?php include_once './layout/footer.html' ?>
