@@ -5,7 +5,7 @@ namespace Vpos;
 class Core
 {
     const PAGE_NAME_HOMEPAGE = 'Home';
-    const PAGE_NAME_RESULT = 'Payfor3DHostPayment';
+    const PAGE_NAME_RESULT = 'Result';
     const PAGE_NAME_NOT_FOUND = 'NotFound';
 
     public $pageName;
@@ -51,7 +51,7 @@ class Core
             !$this->isPageExists() OR
             (
                 isset($_GET['p']) AND
-                $_GET['p'] === 'Form' AND
+                $_GET['p'] === 'Review' AND
                 !isset($_POST['vpos'])
             )
         ) {

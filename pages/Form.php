@@ -1,44 +1,36 @@
 <?php
-$Rnd = microtime();
-$hashStr =
-    $_POST['vpos']['fields']['MbrId'] .
-    $_POST['vpos']['fields']['OrderId'] .
-    $_POST['vpos']['fields']['PurchAmount'] .
-    $_POST['vpos']['fields']['OkUrl'] .
-    $_POST['vpos']['fields']['FailUrl'] .
-    $_POST['vpos']['fields']['TxnType'] .
-    $_POST['vpos']['fields']['InstallmentCount'] .
-    $Rnd .
-    $_POST['vpos']['fields']['MerchantPass'];
-$Hash = base64_encode(pack('H*', sha1($hashStr)));
+
+$dummyData = [
+    'InstallmentCount' => '0',
+    'Currency' => env('CURRENCY'),
+    'OrderId' => 'FO' . time(),
+    'OrgOrderId' => '',
+    'PurchAmount' => '3',
+    'Lang' => env('LANG')
+];
 ?>
 
-<h2>Review</h2>
+<form method="post" class="form-horizontal" action="/?p=Review">
+    <h2>
+        <?= isset($_GET['p']) ? str_split($_GET['p'], 6)[1] : ""; ?>
+    </h2>
 
-<form method="post" action="<?= $_POST['vpos']['action'] ?>">
-    <table class="table table-hover">
-        <tr>
-            <th>Data Name</th>
-            <th>Value</th>
-        </tr>
-        <?php foreach ($_POST['vpos']['fields'] as $name => $value) : ?>
-            <tr>
-                <td><?= $name ?></td>
-                <td><?= $value ?></td>
-                <input type="hidden" name="<?= $name ?>" value="<?= $value ?>"/>
-            </tr>
-        <?php endforeach; ?>
-        <tr>
-            <td>Rnd</td>
-            <td><?= $Rnd ?></td>
-            <input type="hidden" name="Rnd" value="<?= $Rnd ?>"/>
-        </tr>
-        <tr>
-            <td>Hash</td>
-            <td><?= $Hash ?></td>
-            <input type="hidden" name="Hash" value="<?= $Hash ?>"/>
-        </tr>
-    </table>
+    <input type="hidden" name="vpos[action]" value="<?= env('3D_HOST_FORM_ACTION') ?>"/>
 
-    <button type="submit" class="btn btn-primary">Proceed</button>
+    <?php foreach ((new \Vpos\Type('3DHost'))->getParameters() as $name => $value) : ?>
+        <div class="form-group form-group-sm">
+            <label class="col-sm-2 control-label" for="<?= $name ?>Id"><?= $name ?></label>
+            <div class="col-sm-10">
+                <input
+                        type="text"
+                        class="form-control"
+                    <?= ($name === 'Rnd' or $name === 'Hash') ? 'disabled' : '' ?>
+                        name="<?= 'vpos[fields][' . $name . ']' ?>"
+                        value="<?= ($value OR $name === 'Rnd' or $name === 'Hash') ? $value : $dummyData[$name] ?>" id="<?= $name ?>Id"
+                />
+            </div>
+        </div>
+    <?php endforeach; ?>
+
+    <input type="submit" class="btn btn-primary" value="Review"/>
 </form>

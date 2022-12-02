@@ -94,7 +94,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <a href="/?p=Payfor3DHost"
+                        <a href="/?p=Form"
                            class="btn-link alert-link">Payfor3DHost</a></td>
                 </tr>
                 <tr>
