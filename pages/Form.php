@@ -12,24 +12,27 @@ $dummyData = [
 
 <form method="post" class="form-horizontal" action="/?p=Review">
     <h2>
-        <?= isset($_GET['p']) ? str_split($_GET['p'], 6)[1] : ""; ?>
+        TXN Type: <?= isset($_GET['t']) ? $_GET['t'] : ""; ?>
     </h2>
+    <br/>
 
     <input type="hidden" name="vpos[action]" value="<?= env('3D_HOST_FORM_ACTION') ?>"/>
 
-    <?php foreach ((new \Vpos\Type('3DHost'))->getParameters() as $name => $value) : ?>
-        <div class="form-group form-group-sm">
-            <label class="col-sm-2 control-label" for="<?= $name ?>Id"><?= $name ?></label>
-            <div class="col-sm-10">
-                <input
-                        type="text"
-                        class="form-control"
-                    <?= ($name === 'Rnd' or $name === 'Hash') ? 'disabled' : '' ?>
-                        name="<?= 'vpos[fields][' . $name . ']' ?>"
-                        value="<?= ($value OR $name === 'Rnd' or $name === 'Hash') ? $value : $dummyData[$name] ?>" id="<?= $name ?>Id"
-                />
+    <?php foreach ((new \Vpos\Type())->getParameters() as $name => $value) : ?>
+        <?php if ($name !== 'Rnd' and $name !== 'Hash') : ?>
+            <div class="form-group form-group-sm">
+                <label class="col-sm-2 control-label" for="<?= $name ?>Id"><?= $name ?></label>
+                <div class="col-sm-10">
+                    <input
+                            type="text"
+                            class="form-control"
+                            name="<?= 'vpos[fields][' . $name . ']' ?>"
+                            value="<?= ($value or $name === 'Rnd' or $name === 'Hash') ? $value : $dummyData[$name] ?>"
+                            id="<?= $name ?>Id"
+                    />
+                </div>
             </div>
-        </div>
+        <?php endif; ?>
     <?php endforeach; ?>
 
     <input type="submit" class="btn btn-primary" value="Review"/>

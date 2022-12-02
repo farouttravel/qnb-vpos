@@ -4,108 +4,129 @@
             <table id="tblForm" class="table table-hover ">
                 <tr>
                     <td>
-                        <a href="/?p=PayforAuth"
-                           class="btn-link alert-link">PayforAuth</a></td>
+                        <a href="/?p=Form&t=Auth"
+                           class="btn-link alert-link">PayforAuth</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/?p=PayforBatchClose"
-                           class="btn-link alert-link">PayforBatchClose</a></td>
+                        <a href="/?p=Form&t=BatchClose"
+                           class="btn-link alert-link">PayforBatchClose</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/?p=PayforInstallmentAuth"
-                           class="btn-link alert-link">PayforInstallmentAuth</a></td>
+                        <a href="/?p=Form&t=InstallmentAuth"
+                           class="btn-link alert-link">PayforInstallmentAuth</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/?p=PayforOrderInquiry"
-                           class="btn-link alert-link">PayforOrderInquiry</a></td>
+                        <a href="/?p=Form&t=OrderInquiry"
+                           class="btn-link alert-link">PayforOrderInquiry</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/?p=PayforPostAuth"
-                           class="btn-link alert-link">PayforPostAuth</a></td>
+                        <a href="/?p=Form&t=PostAuth"
+                           class="btn-link alert-link">PayforPostAuth</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/?p=PayforPreAuth"
-                           class="btn-link alert-link">PayforPreAuth</a></td>
+                        <a href="/?p=Form&t=PreAuth"
+                           class="btn-link alert-link">PayforPreAuth</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/?p=PayforRefund"
-                           class="btn-link alert-link">PayforRefund</a></td>
+                        <a href="/?p=Form&t=Refund"
+                           class="btn-link alert-link">PayforRefund</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/?p=PayforTxnHistory"
-                           class="btn-link alert-link">PayforTxnHistory</a></td>
+                        <a href="/?p=Form&t=TxnHistory"
+                           class="btn-link alert-link">PayforTxnHistory</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/?p=PayforEodDetail"
-                           class="btn-link alert-link">PayforEodDetail</a></td>
+                        <a href="/?p=Form&t=EodDetail"
+                           class="btn-link alert-link">PayforEodDetail</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/?p=PayforVoid"
-                           class="btn-link alert-link">PayforVoid</a></td>
+                        <a href="/?p=Form&t=Void"
+                           class="btn-link alert-link">PayforVoid</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/?p=PayforParaPuanInquiry"
-                           class="btn-link alert-link">PayforParaPuanInquiry</a></td>
+                        <a href="/?p=Form&t=ParaPuanInquiry"
+                           class="btn-link alert-link">PayforParaPuanInquiry</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/?p=PayforParaPuanAuth"
-                           class="btn-link alert-link">PayforParaPuanAuth</a></td>
+                        <a href="/?p=Form&t=ParaPuanAuth"
+                           class="btn-link alert-link">PayforParaPuanAuth</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/?p=PayforInsurance"
-                           class="btn-link alert-link">PayforInsurance</a></td>
+                        <a href="/?p=Form&t=Insurance"
+                           class="btn-link alert-link">PayforInsurance</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/?p=PayforPaymentLink"
-                           class="btn-link alert-link">PayforPaymentLink</a></td>
+                        <a href="/?p=Form&t=PaymentLink"
+                           class="btn-link alert-link">PayforPaymentLink</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/?p=PayforPaymentLinkReport"
-                           class="btn-link alert-link">PayforPaymentLinkReport</a></td>
+                        <a href="/?p=Form&t=PaymentLinkReport"
+                           class="btn-link alert-link">PayforPaymentLinkReport</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/?p=PayforAuthPNR"
-                           class="btn-link alert-link">PayforAuthPNR</a></td>
+                        <a href="/?p=Form&t=AuthPNR"
+                           class="btn-link alert-link">PayforAuthPNR</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/?p=Payfor3DPay"
-                           class="btn-link alert-link">Payfor3DPay</a></td>
+                        <a href="/?p=Form&t=3DPay"
+                           class="btn-link alert-link">Payfor3DPay</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/?p=Payfor3DModel"
-                           class="btn-link alert-link">Payfor3DModel</a></td>
+                        <a href="/?p=Form&t=3DModel"
+                           class="btn-link alert-link">Payfor3DModel</a>
+                    </td>
+                </tr>
+                <tr class="bg-success">
+                    <td>
+                        <a href="/?p=Form&t=3DHost"
+                           class="btn-link alert-link">Payfor3DHost</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/?p=Form"
-                           class="btn-link alert-link">Payfor3DHost</a></td>
+                        <a href="/?p=Form&t=3DHostDetails1"
+                           class="btn-link alert-link">Payfor3DHostDetails1</a>
+                    </td>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/?p=Payfor3DHostDetails1"
-                           class="btn-link alert-link">Payfor3DHostDetails1</a></td>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="/?p=Payfor3DHostDetails2"
-                           class="btn-link alert-link">Payfor3DHostDetails2</a></td>
+                        <a href="/?p=Form&t=3DHostDetails2"
+                           class="btn-link alert-link">Payfor3DHostDetails2</a>
+                    </td>
                 </tr>
 
             </table>
