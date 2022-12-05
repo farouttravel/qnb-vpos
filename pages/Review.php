@@ -42,7 +42,7 @@ if ($_POST['vpos']['fields']['SecureType'] !== 'NonSecure') {
                 <input type="hidden" name="Hash" value="<?= $Hash ?>"/>
             </tr>
         <?php endif; ?>
-    </table>
 
+    <button type="button" onclick="history.back();return false;" class="btn btn-danger">Back</button>
     <button type="submit" class="btn btn-primary">Proceed</button>
 </form>
