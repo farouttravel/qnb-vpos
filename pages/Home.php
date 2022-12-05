@@ -2,7 +2,7 @@
     <div class="text-left">
         <div class="col-lg-12">
             <table id="tblForm" class="table table-hover ">
-                <tr>
+                <tr class="bg-success">
                     <td>
                         <a href="/?p=Form&t=Auth"
                            class="btn-link alert-link">PayforAuth</a>

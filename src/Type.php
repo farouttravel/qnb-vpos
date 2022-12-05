@@ -6,6 +6,7 @@ class Type
 {
     const LOOK_UP_PARAMETERS = [
         '3DHost' => [
+            'FormAction',
             'MbrId',
             'MerchantID',
             'MerchantPass',
@@ -22,6 +23,24 @@ class Type
             'Lang',
             'Rnd',
             'Hash'
+        ],
+        'Auth' => [
+            'FormAction',
+            'MbrId',
+            'MerchantID',
+            'UserCode',
+            'UserPass',
+            'OrderId',
+            'SecureType',
+            'TxnType',
+            'PurchAmount',
+            'Currency',
+            'CardHolderName',
+            'Pan',
+            'Expiry',
+            'Cvv2',
+            'MOTO',
+            'Lang'
         ]
     ];
 

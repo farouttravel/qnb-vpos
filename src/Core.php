@@ -7,6 +7,7 @@ class Core
     const PAGE_NAME_HOMEPAGE = 'Home';
     const PAGE_NAME_RESULT = 'Result';
     const PAGE_NAME_NOT_FOUND = 'NotFound';
+    const PAGE_NAME_REVIEW = 'Review';
 
     public $pageName;
 
@@ -51,7 +52,7 @@ class Core
             !$this->isPageExists() OR
             (
                 isset($_GET['p']) AND
-                $_GET['p'] === 'Review' AND
+                $_GET['p'] === self::PAGE_NAME_REVIEW AND
                 !isset($_POST['vpos'])
             )
         ) {

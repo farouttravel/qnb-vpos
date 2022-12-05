@@ -6,8 +6,14 @@ $dummyData = [
     'OrderId' => 'FO' . time(),
     'OrgOrderId' => '',
     'PurchAmount' => '3',
-    'Lang' => env('LANG')
+    'Lang' => env('LANG'),
+    'MOTO' => env('ECOMMERCE')
 ];
+
+$type = new \Vpos\Type();
+$parameters = $type->getParameters();
+
+$action = array_shift($parameters);
 ?>
 
 <form method="post" class="form-horizontal" action="/?p=Review">
@@ -16,9 +22,9 @@ $dummyData = [
     </h2>
     <br/>
 
-    <input type="hidden" name="vpos[action]" value="<?= env('3D_HOST_FORM_ACTION') ?>"/>
+    <input type="hidden" name="vpos[action]" value="<?= $action ?>"/>
 
-    <?php foreach ((new \Vpos\Type())->getParameters() as $name => $value) : ?>
+    <?php foreach ($parameters as $name => $value) : ?>
         <?php if ($name !== 'Rnd' and $name !== 'Hash') : ?>
             <div class="form-group form-group-sm">
                 <label class="col-sm-2 control-label" for="<?= $name ?>Id"><?= $name ?></label>
