@@ -1,4 +1,4 @@
-# QNB Finansbank Vpos TEST Project
+# QNB Finansbank VPOS Test Project
 
 This is just a test project to experience QNB Finansbank VPOS features and TXN types.
 
