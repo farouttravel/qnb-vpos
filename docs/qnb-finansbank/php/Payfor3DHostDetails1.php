@@ -51,6 +51,7 @@
 		$hashstr = $MbrId . $OrderId . $PurchAmount . $OkUrl . $FailUrl . $TxnType . $InstallmentCount . $rnd . $MerchantPass;
 		$hash = base64_encode(pack('H*',sha1($hashstr)));
 		?>
+
 <center>
 <form method="post" action="https://vpostest.qnbfinansbank.com/Gateway/3DHost.aspx">
 			<table class="table">

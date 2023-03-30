@@ -1,0 +1,4 @@
+C:\Users\cenk.erdogan\Documents\Visual Studio 2015\Projects\TempWorkSolution\Epayment\bin\Release\ePayment.dll
+C:\Users\cenk.erdogan\Documents\Visual Studio 2015\Projects\TempWorkSolution\Epayment\bin\Release\ePayment.pdb
+C:\Users\cenk.erdogan\Documents\Visual Studio 2015\Projects\TempWorkSolution\Epayment\obj\Release\ePayment.dll
+C:\Users\cenk.erdogan\Documents\Visual Studio 2015\Projects\TempWorkSolution\Epayment\obj\Release\ePayment.pdb

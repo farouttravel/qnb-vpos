@@ -11,9 +11,9 @@
          if ($_POST){
          $data = "".
           "MbrId=5&".                                                                         //Kurum Kodu
-          "MerchantID=009600000005835&".                                                               //Language_MerchantID
+          "MerchantID=085300000009746&".                                                               //Language_MerchantID
           "UserCode=farouttest&".                                                                   //Kullanici Kodu
-          "UserPass=vyd5G&".                                                                   //Kullanici Sifre
+          "UserPass=tRii8&".                                                                   //Kullanici Sifre
           "OrderId=".$_POST["OrderId"]."&".                                                         //Siparis Numarasi
           "TxnType=PaymentLink&".                                                                   //Islem Tipi
           "PurchAmount=".$_POST["PurchAmount"]."&".                                                 //Tutar
