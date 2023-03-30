@@ -18,12 +18,10 @@ $app = new \Vpos\Core();
         <table class="table table-hover ">
             <tr>
                 <td>
-                    <div id="logoLeft" runat="server"
-                         style="background-repeat: no-repeat; float: right; height: 65px; width: 220px; background-image: url('https://vpos.qnbfinansbank.com/Common/Styles/images/memberLogos/FinansbankLeft.png');">
-                    </div>
+                    <h1>QNB Finansbank</h1>
                 </td>
                 <td>
-                    <h1>SEA SAFARİ TURİZM Test Scriptleri</h1>
+                    <h1>Test Scripts</h1>
                 </td>
             </tr>
         </table>

@@ -33,7 +33,7 @@ $action = array_shift($parameters);
                             type="text"
                             class="form-control"
                             name="<?= 'vpos[fields][' . $name . ']' ?>"
-                            value="<?= ($value or $name === 'Rnd' or $name === 'Hash') ? $value : $dummyData[$name] ?>"
+                            value="<?= !empty($value) ? $value : $dummyData[$name] ?>"
                             id="<?= $name ?>Id"
                     />
                 </div>

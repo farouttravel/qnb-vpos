@@ -116,13 +116,13 @@
                            class="btn-link alert-link">Payfor3DHost</a>
                     </td>
                 </tr>
-                <tr>
+                <tr class="bg-success">
                     <td>
                         <a href="/?p=Form&t=3DHostDetails1"
                            class="btn-link alert-link">Payfor3DHostDetails1</a>
                     </td>
                 </tr>
-                <tr>
+                <tr class="bg-success">
                     <td>
                         <a href="/?p=Form&t=3DHostDetails2"
                            class="btn-link alert-link">Payfor3DHostDetails2</a>
