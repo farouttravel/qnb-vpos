@@ -2,48 +2,10 @@
 
 namespace Vpos;
 
+define('PARAMETERS_LOOK_UP', include 'blueprints.php');
+
 class Type
 {
-    const LOOK_UP_PARAMETERS = [
-        '3DHost' => [
-            'FormAction',
-            'MbrId',
-            'MerchantID',
-            'MerchantPass',
-            'UserCode',
-            'SecureType',
-            'TxnType',
-            'InstallmentCount',
-            'Currency',
-            'OkUrl',
-            'FailUrl',
-            'OrderId',
-            'OrgOrderId',
-            'PurchAmount',
-            'Lang',
-            'Rnd',
-            'Hash'
-        ],
-        'Auth' => [
-            'FormAction',
-            'MbrId',
-            'MerchantID',
-            'UserCode',
-            'UserPass',
-            'OrderId',
-            'SecureType',
-            'TxnType',
-            'PurchAmount',
-            'Currency',
-            'CardHolderName',
-            'Pan',
-            'Expiry',
-            'Cvv2',
-            'MOTO',
-            'Lang'
-        ]
-    ];
-
     private $name;
     private $parameters;
 
@@ -52,7 +14,10 @@ class Type
         $this->name = isset($_GET['t']) ? $_GET['t'] : '3DHost';
         $this->parameters = [];
 
-        foreach (self::LOOK_UP_PARAMETERS[$this->name] as $parameter) {
+        if (!isset(PARAMETERS_LOOK_UP[$this->name]))
+            throw new \Exception('404', 404);
+
+        foreach (PARAMETERS_LOOK_UP[$this->name] as $parameter) {
             $envName = $this->getShapedParameterName($parameter);
 
             $this->parameters[$parameter] = !! env($envName) ? env($envName) : '';
@@ -65,7 +30,7 @@ class Type
 
     private function getShapedParameterName($parameter)
     {
-        $parameter = preg_replace('/((?:^|[A-Z])[a-z]+|3D|ID)/','_$1', $this->name . $parameter);
+        $parameter = preg_replace('/((?:^|[A-Z])[a-z]+|3D|ID|1|2)/','_$1', $this->name . $parameter);
 
         return ltrim(strtoupper($parameter), '_');
     }
