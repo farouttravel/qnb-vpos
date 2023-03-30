@@ -47,6 +47,8 @@ class Core
     }
 
     private function loadPageData() {
+        if (!array_key_exists('p', $_GET)) return null;
+
         switch ($_GET['p']) {
             case 'Form':
                 $type = new \Vpos\Type();

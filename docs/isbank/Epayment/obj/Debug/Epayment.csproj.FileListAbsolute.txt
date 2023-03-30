@@ -1,5 +1,0 @@
-C:\Users\cenk.erdogan\Documents\Visual Studio 2015\Projects\TempWorkSolution\Epayment\bin\Debug\ePayment.dll
-C:\Users\cenk.erdogan\Documents\Visual Studio 2015\Projects\TempWorkSolution\Epayment\bin\Debug\ePayment.pdb
-C:\Users\cenk.erdogan\Documents\Visual Studio 2015\Projects\TempWorkSolution\Epayment\obj\Debug\Epayment.csprojResolveAssemblyReference.cache
-C:\Users\cenk.erdogan\Documents\Visual Studio 2015\Projects\TempWorkSolution\Epayment\obj\Debug\ePayment.dll
-C:\Users\cenk.erdogan\Documents\Visual Studio 2015\Projects\TempWorkSolution\Epayment\obj\Debug\ePayment.pdb
