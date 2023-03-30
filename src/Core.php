@@ -46,7 +46,50 @@ class Core
         return isset($_GET['p']) ? $_GET['p'] : self::PAGE_NAME_HOMEPAGE;
     }
 
-    function loadPage()
+    private function loadPageData() {
+        switch ($_GET['p']) {
+            case 'Form':
+                $type = new \Vpos\Type();
+                $parameters = $type->getParameters();
+                $action = array_shift($parameters);
+                return [
+                    'dummyData' => [
+                        'InstallmentCount' => '0',
+                        'Currency' => env('CURRENCY'),
+                        'OrderId' => 'FO' . time(),
+                        'OrgOrderId' => '',
+                        'PurchAmount' => '3',
+                        'Lang' => env('LANG'),
+                        'MOTO' => env('ECOMMERCE')
+                    ],
+                    'parameters' => $parameters,
+                    'action' => $action
+                ];
+            case 'Review':
+                if ($_POST['vpos']['fields']['SecureType'] !== 'NonSecure') {
+                    $Rnd = microtime();
+                    $hashStr =
+                        $_POST['vpos']['fields']['MbrId'] .
+                        $_POST['vpos']['fields']['OrderId'] .
+                        $_POST['vpos']['fields']['PurchAmount'] .
+                        $_POST['vpos']['fields']['OkUrl'] .
+                        $_POST['vpos']['fields']['FailUrl'] .
+                        $_POST['vpos']['fields']['TxnType'] .
+                        $_POST['vpos']['fields']['InstallmentCount'] .
+                        $Rnd .
+                        $_POST['vpos']['fields']['MerchantPass'];
+                    $Hash = base64_encode(pack('H*', sha1($hashStr)));
+                    return [
+                        'Rnd' => $Rnd,
+                        'Hash' => $Hash
+                    ];
+                }
+            default:
+                return [];
+        }
+    }
+
+    function load()
     {
         if (
             !$this->isPageExists() OR
@@ -61,6 +104,7 @@ class Core
             $this->setPageName(self::PAGE_NAME_NOT_FOUND);
         }
 
+        $pageData = $this->loadPageData();
         include_once $this->getAbsolutePagePath();
     }
 }

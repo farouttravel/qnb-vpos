@@ -3,6 +3,23 @@
 namespace Vpos;
 
 return [
+    'Auth' => [
+        'FormAction',
+        'MbrId',
+        'MerchantID',
+        'UserCode',
+        'UserPass',
+        'OrderId',
+        'SecureType',
+        'TxnType',
+        'PurchAmount',
+        'Currency',
+        'CardHolderName',
+        'Pan',
+        'Expiry',
+        'MOTO',
+        'Lang'
+    ],
     '3DHost' => [
         'FormAction',
         'MbrId',
@@ -85,23 +102,5 @@ return [
         'TemplateType',
         'Rnd',
         'Hash'
-    ],
-    'Auth' => [
-        'FormAction',
-        'MbrId',
-        'MerchantID',
-        'UserCode',
-        'UserPass',
-        'OrderId',
-        'SecureType',
-        'TxnType',
-        'PurchAmount',
-        'Currency',
-        'CardHolderName',
-        'Pan',
-        'Expiry',
-        'Cvv2',
-        'MOTO',
-        'Lang'
     ]
 ];

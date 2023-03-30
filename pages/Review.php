@@ -1,19 +1,4 @@
-<?php
-if ($_POST['vpos']['fields']['SecureType'] !== 'NonSecure') {
-    $Rnd = microtime();
-    $hashStr =
-        $_POST['vpos']['fields']['MbrId'] .
-        $_POST['vpos']['fields']['OrderId'] .
-        $_POST['vpos']['fields']['PurchAmount'] .
-        $_POST['vpos']['fields']['OkUrl'] .
-        $_POST['vpos']['fields']['FailUrl'] .
-        $_POST['vpos']['fields']['TxnType'] .
-        $_POST['vpos']['fields']['InstallmentCount'] .
-        $Rnd .
-        $_POST['vpos']['fields']['MerchantPass'];
-    $Hash = base64_encode(pack('H*', sha1($hashStr)));
-}
-?>
+<?php /** @var array $pageData */ ?>
 
 <h2>Review</h2>
 
@@ -33,15 +18,16 @@ if ($_POST['vpos']['fields']['SecureType'] !== 'NonSecure') {
         <?php if ($_POST['vpos']['fields']['SecureType'] !== 'NonSecure') : ?>
             <tr>
                 <td>Rnd</td>
-                <td><?= $Rnd ?></td>
-                <input type="hidden" name="Rnd" value="<?= $Rnd ?>"/>
+                <td><?= $pageData['Rnd'] ?></td>
+                <input type="hidden" name="Rnd" value="<?= $pageData['Rnd'] ?>"/>
             </tr>
             <tr>
                 <td>Hash</td>
-                <td><?= $Hash ?></td>
-                <input type="hidden" name="Hash" value="<?= $Hash ?>"/>
+                <td><?= $pageData['Hash'] ?></td>
+                <input type="hidden" name="Hash" value="<?= $pageData['Hash'] ?>"/>
             </tr>
         <?php endif; ?>
+    </table>
 
     <button type="button" onclick="history.back();return false;" class="btn btn-danger">Back</button>
     <button type="submit" class="btn btn-primary">Proceed</button>
